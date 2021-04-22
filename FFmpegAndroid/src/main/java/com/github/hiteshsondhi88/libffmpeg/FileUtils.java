@@ -52,7 +52,7 @@ class FileUtils {
 	}
 
     static String getFFmpeg(Context context) {
-        return getFilesDirectory(context).getAbsolutePath() + File.separator + FileUtils.ffmpegFileName;
+        return context.getApplicationInfo().nativeLibraryDir + "/" + ffmpegFileName;
     }
 
     static String getFFmpeg(Context context, Map<String,String> environmentVars) {
